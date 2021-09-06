@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.r{
+				border-bottom:dashed;
+			}
+
+			.a{
+				font-size: x-large;
+				font-family: "黑体";
+			}
+			.b{
+				border-bottom:dashed;
+				border-top:dashed;
+			}
+			.w{
+				border-bottom:dashed;
+			}
+			.q{
+				margin-right: 40px;
+			}
+			.e{
+				font-weight:bold;
+			}
+			.t{
+				padding-left: 6.25rem;
+			}
+		</style>
+			<table style="width: 400px">
+				<tr><td style="padding: 8px 0px 8px 4px;">顾客联</td></tr
+				<tr><td class="a">请您留意取餐账单号</td></tr>
+				<tr><td class="t" >自取客户联</td></tr>
+				<tr><td>永和大王（北三环西路店）</td></tr>
+				<tr><td>010-62112313</td></tr>
+				<tr><td class="t">--结账单--</td></tr>
+				<tr><td class="a">账单号：P000009</td></tr>
+				<tr><td>账单类型：堂食</td></tr>
+				<tr><td class="e">人数：1</td></tr>
+				<tr><td>收银员：张静</td></tr>
+				<tr><td>开单时间：2018-04-17 07:24:11</td></tr>
+				<tr><td>结账时间：2018-04-17 07:24:22</td></tr>
+						</table>
+	</head>
+
+	<body>
+		<table class="b" style="width: 400px">
+			<tr><td>数量</td><td>品项</td><td>金额</td></tr>
+			<tr><td rowspan="3">1</td><td>油条豆浆套餐</td><td rowspan="3">7.00</td></tr>
+			<tr><td>1X--非巩油条</td></tr>
+			<tr><td>1X--现磨豆浆（热/冷）</td></tr>
+					</table>
+			</body>
+			<body2>
+				<table style="width: 400px" class="w">
+			<tr><td>支付宝花呗一元早餐</td><td style="width: 100px;">1</td><td>-3.00</td></tr>
+			<tr><td colspan="2">合计</td><td>4.00</td></tr>
+			<tr><td colspan="2">支付宝</td><td>1.00</td></tr>
+			<tr><td colspan="2">支付宝补贴</td><td>3.00</td></tr>
+		</table>
+				</body2>
+				
+		<body4>
+		<table class="r">
+			<tr><td style="width: 400px">打印时间：2018-04-17 07：24：23</td></tr>
+		</table>
+		<body4>
+
+<body3>
+	<table style="width: 400px">
+		<tr><td>根据相关税法规定，电子发票的开票日期同网上申请电子发票的日期，如您需要当日的电子发票请务必在消费当日通过扫描下方二维码，根据指引步骤开具您的增值税电子普通发票，此二维码30天有效扫码时请保持小票平整。
+		<tr><td class="t"><img src="2.png" height="200px" width="200"></td></tr>
+		<tr><td>官网:www.yonghe.com.cn</td></tr>
+		<tr><td>加盟热线：85-21-60769397 或 86-21-6032345</td></tr>
+	</table>
+</body3>
+
+	<body2>
+		
+	</body2>
+
+		
+
+			
+
+
+
+</html>
