@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作业</title>
+		<script>
+			function add(){
+			var a=[1,2,3,4,5,6,7];
+			var b=0;
+			for(var i in a){
+				b=b+a[i];
+				}
+			console.log(b)
+			}
+			add();
+			
+			
+			var a1=[1,2,3,4,5,6,7,8,9]
+			function add2(a){
+				var b=0;
+				for(var i in a){
+					b=b+a[i]
+				}
+				console.log(b)
+			}
+			add2(a1);
+			
+			var sum =add3(a1);
+			function add3(a){
+				var b=0;
+				for(var i in a){
+					b=b+a[i];
+				}
+				return b;
+			}
+			console.log(sum)
+			
+			
+		/////////////////////////////////////////////////////
+		var d=[];
+		console.log(d.length);
+		d=[1.1,2,'666',true,null,3.333333]
+		console.log(d.length);
+		d[3]=919191919;
+		console.log(d);
+		
+		for(var i=0;i<d.length;i++){
+			console.log(d[i])
+	
+		}
+		for(var q in d){
+			console.log(d[q])
+		}
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
