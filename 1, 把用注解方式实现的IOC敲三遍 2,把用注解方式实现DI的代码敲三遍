@@ -1,0 +1,132 @@
+package cn.fuxk.Spring;
+
+public class Hello {
+    public void hi(){
+        System.out.println("hello Spring---");
+    }
+}
+==========================================================
+package cn.fuxk.Spring;
+
+public class User {
+    public void eat(){
+        System.out.println("吃");
+    }
+}
+==========================================================
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    {“hello",Class.forName(cn.fuxk.Spring.Hello).newInstance}
+    -->
+
+    <bean class="cn.fuxk.Spring.Hello" id="hello"></bean>
+
+    <bean class="cn.fuxk.Spring.User" id="user"></bean>
+</beans>
+
+
+========================================================================
+package cn.fuxk.spring;
+
+import cn.fuxk.Spring.Hello;
+import cn.fuxk.Spring.User;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class test1 {
+    //测试IOC(创建类+配置类）
+    @Test/
+    public void ioc(){
+
+        ClassPathXmlApplicationContext spring
+                = new ClassPathXmlApplicationContext(
+                        "spring-config.xml");
+
+        Object o = spring.getBean("hello");
+        System.out.println(o);//cn.fuxk.Spring.Hello@54d9d12d
+        Hello h = (Hello) o;
+        h.hi();
+
+        Hello h2 =(Hello) spring.getBean("hello");
+        //System.out.println(h2);//cn.fuxk.Spring.Hello@54d9d12d
+        h2.hi();
+
+
+        Object o3 = spring.getBean("user");
+        System.out.println(o3);//cn.fuxk.Spring.User@43bc63a3
+        User u = (User) o3;
+        u.eat();
+
+        User u2 = (User) spring.getBean("user");
+        u2.eat();
+    }
+}
+
+
+======================================================================================================
+======================================================================================================
+======================================================================================================
+DI 
+
+
+package cn.fuxk.di2;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Order {
+    String name="IPhone 13";
+    //get set
+    @Autowired//di
+    private UserInfo ui;
+
+
+    @Override
+    public String toString() {
+        System.out.println(ui.name);
+        ui.toString();
+        return "Order{" +
+                "name='" + name + '\'' +
+                ", ui=" + ui +
+                '}';
+    }
+}
+======================================================================================================
+
+package cn.fuxk.di2;
+
+import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestDI {
+    @Test
+    public void di(){
+        //1.读取配置文件
+        ClassPathXmlApplicationContext spring = new ClassPathXmlApplicationContext("spring.xml");
+        //2.getBean()
+        Order o = (Order) spring.getBean("order");
+        System.out.println(o);
+    }
+}
+======================================================================================================
+
+
+package cn.fuxk.di2;
+
+import org.springframework.stereotype.Component;
+
+@Component//ioc{"userInfo”=new UserInfo()}
+public class UserInfo {
+    String name="jacl";
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "name='" + name + '\'' +
+                '}';
+
+    }
+}
